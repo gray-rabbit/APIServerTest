@@ -14,3 +14,5 @@ Content-Type: application/json
     "dateOfBirth":"1983-04-22"
 }
 
+###
+GET https://localhost:7053/api/user/getuser?id=3cd82925-c283-4456-8ab2-5e69c590b88f HTTP/1.1
