@@ -16,3 +16,31 @@ Content-Type: application/json
 
 ###
 GET https://localhost:7053/api/user/getuser?id=3cd82925-c283-4456-8ab2-5e69c590b88f HTTP/1.1
+
+
+### 
+POST  https://localhost:7053/api/account/register HTTP/1.1
+Content-Type: application/json
+
+{
+     "firstName":"Gray",
+    "lastName":"성준",
+    "email":"talksis4@nate.com",
+    "password":"wlsWkfn0117!"
+}
+
+
+###
+POST  https://localhost:7053/api/account/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "email":"talksis4@nate.com",
+    "password":"wlsWkfn0117!"
+}
+
+
+###
+
+GET https://localhost:7053/api/user HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjdlODlmMzkyLTVjNmYtNGRmZi1hYzgzLWY5YzFjYzFhMThmYyIsInN1YiI6InRhbGtzaXM0QG5hdGUuY29tIiwiZW1haWwiOiJ0YWxrc2lzNEBuYXRlLmNvbSIsImp0aSI6IjQyOTRmMDQ1LWRlMDEtNGJlNC04NDdmLTkzYzMzMTZlOThkZSIsIm5iZiI6MTYzNTM1MjIwMSwiZXhwIjoxNjM1MzU1ODAxLCJpYXQiOjE2MzUzNTIyMDEsImlzcyI6IkdyYXlSYWJiaVQifQ.kvw1TNoYLzrTIw60VHdiSlWIcfniaLiL0M9IZgoHjqI

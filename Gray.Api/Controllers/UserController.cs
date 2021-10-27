@@ -2,12 +2,15 @@ using Gray.DataService.Data;
 using Gray.DataService.IConfiguration;
 using Gray.Entities.DbSets;
 using Gray.Entities.Dtos;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Gray.Api.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class UserController : ControllerBase
     {
         // private readonly AppDbContext context;
@@ -47,7 +50,8 @@ namespace Gray.Api.Controllers
 
         [HttpGet]
         [Route("GetUser")]
-        public async Task<IActionResult> GetUser(Guid id){
+        public async Task<IActionResult> GetUser(Guid id)
+        {
             return Ok(await unitOfWork.Users.GetById(id));
         }
     }
